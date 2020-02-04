@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: index.js
+        uses: cwinslow22/creating-a-javascript-action/index.js
         with:
           who-to-greet: "Charlie"
       # Use the output from the `hello` step
