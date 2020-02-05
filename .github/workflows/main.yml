@@ -7,9 +7,11 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: cwinslow22/creating-a-javascript-action@master
+        uses: cwinslow22/version-bump-action@master
         with:
-          who-to-greet: "Charlie"
+          who-to-greet: "Charlie?"
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the new version
+        run: echo "The new version is ${{ outputs.version }}"
